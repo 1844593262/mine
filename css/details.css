@@ -129,5 +129,7 @@
       margin-top: -8px; }
       .evaluate .goods-detail-tab .active span {
         line-height: 28px; }
+  .evaluate .hideDiv {
+    display: none; }
 
 /*# sourceMappingURL=details.css.map */

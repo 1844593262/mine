@@ -97,4 +97,10 @@ $(function(){
 		$.cookie("cart",cart,{expires:7,path:"/"});
 	})
 	
+	//图片切换
+	$(".goods-detail-tab div").click(function(){
+		$(this).addClass("active").siblings().removeClass("active").parent().siblings(".section").eq($(this).index()).removeClass("hideDiv").siblings(".section").addClass("hideDiv");	
+	});
+
+	
 })

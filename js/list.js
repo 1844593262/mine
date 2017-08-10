@@ -155,17 +155,25 @@ $(function(){
 	 	 	$(item.smallimg).each(function(index,item2){
 	 	 		htmlSmall += '<li><a href="javscript:;"><img src="'+ item2 +'" alt=""/></a></li>';
 	 	 	}); 	
-	 	 	html += '<dl class="cl1" data-id="'+ item.id +'"><dt>'+htmlPath+'</dt><div class="p-scroll"><span class="prev"><</span><span class="next">></span><div class="ps-wrap"><ul>'+ htmlSmall +'</ul></div></div><ul class="txt1"><li><i>'+ item.newPrice +'</i><s>'+item.oldPrice+'</s></li><li>'+item.tiltle+'</li><li>已售出<i>'+item.sale+'</i>件</li></ul></dl>'	 	
+	 	 	html += '<dl class="cl1" data-id="'+ item.id +'"><dt>'+htmlPath+'</dt><div class="p-scroll"><span class="prev"><</span><span class="next">></span><div class="ps-wrap"><ul>'+ htmlSmall +'</ul></div></div><ul class="txt1"><li><i>'+ item.newPrice +'</i><s>'+item.oldPrice+'</s></li><li>'+item.tiltle+'</li><li>已售出<i>'+item.sale+'</i>件</li><li class="size" style="display:none">尺寸2XL</li></ul></dl>'	 	
 	 	 });
 	 	 $(".clothes").html(html);
 	 	 $(".cl1").click(function(){
 	 	 	 var id=$(this).attr("data-id");
 	 	 	 location.href="detail.html?id="+id;
-	 	 })
-	 	 //点击切换图片
-//	 	  $(".ps-wrap li").mouseover(function(){
-//	 	  	  $(this).parents(".p-scroll").siblings("dt").find("img").attr("src",'');   
-	//})
+	 	 });
+	 	 $(".cl1").hover(function(){
+	 	 	$(this).find("dt").css("border","2px solid #f0f0f0").end().find(".txt1").css("background","#f0f0f0").animate({"height":"85px"}).find(".size").show();
+	 	 },function(){
+	 	 	$(this).find("dt").css("border","2px solid #ffffff ").end().find(".txt1").css("background","#ffffff").animate({"height":"60px"}).find(".size").hide();	 	
+	 	 });
+	 	 
+	 	 
+	 	/* $(".cl1").mouseover(function(){
+	 	 	 $(this).addClass("active").siblings().removeClass("active");
+	 	 })*/
+	 	 $(".active .size").slideDown();
+	 	  $(".active .active").slideDown();
 })
 	 //导入尾部
 	$(".btmfen").load("data/shoes.html");

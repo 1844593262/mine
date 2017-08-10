@@ -361,16 +361,17 @@
             width: 220px;
             margin: 20px 11px 10px;
             border: 1px solid #eee;
-            height: 322px;
+            height: 328px;
             float: left;
             position:relative;
+            box-sizing:border-box;
             dt{
                 height: 244px;
                 border: 0;
                 padding: 3px 0 3px;
                 position: relative;
                 text-align: center;
-                border: 1px solid #eee
+                border: 2px solid #ffffff
               }
          .p-scroll{
              position: absolute;
@@ -425,6 +426,7 @@
          }
          .txt1{
              height: 85px;
+             height: 60px;
              width: 203px;
              padding: 5px 5px 5px 10px;
              li{
@@ -446,6 +448,17 @@
                 }
              }
          }
+       }
+       .active{
+           border:3px solid #C5C5C5;
+           position:relative;
+              //.txt1{
+              //     background:#C5C5C5;
+              //     color:white;
+              //     height:75px;
+              //     bottom:0;
+             // }
+              
        }
         
 }

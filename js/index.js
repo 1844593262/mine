@@ -82,10 +82,15 @@ $(function(){
 		if(index==zlen){
 			index=0;
 		}
-		$(".carousel li").eq(index).stop().animate({"opacity":100},500).siblings().animate({"opacity":0},500);
+		$(".carousel li").eq(index).stop().animate({"opacity":100},500).siblings().stop().animate({"opacity":0},500);
 		$(".dot li").eq(index).addClass("dotAdd").siblings().removeClass("dotAdd");
 		index++;
-	},3000) 
+	},3000);
+	$(".dot li").mouseover(function(){
+		clearInterval(timer);
+		$(this).addClass("dotAdd").siblings().removeClass("dotAdd");
+		$(".carousel li").eq($(this).index()).stop().animate({"opacity":100},500).siblings().stop().animate({"opacity":0},500);	
+	})
 	
 	//切换
 	$(".tab li:first-child").hover(function(){

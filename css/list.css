@@ -309,16 +309,17 @@
     width: 220px;
     margin: 20px 11px 10px;
     border: 1px solid #eee;
-    height: 322px;
+    height: 328px;
     float: left;
-    position: relative; }
+    position: relative;
+    box-sizing: border-box; }
     #sorts .cl1 dt, #sorts .cl2 dt, #sorts .cl3 dt, #sorts .cl4 dt {
       height: 244px;
       border: 0;
       padding: 3px 0 3px;
       position: relative;
       text-align: center;
-      border: 1px solid #eee; }
+      border: 2px solid #ffffff; }
     #sorts .cl1 .p-scroll, #sorts .cl2 .p-scroll, #sorts .cl3 .p-scroll, #sorts .cl4 .p-scroll {
       position: absolute;
       z-index: 2;
@@ -362,6 +363,7 @@
         top: 0; }
     #sorts .cl1 .txt1, #sorts .cl2 .txt1, #sorts .cl3 .txt1, #sorts .cl4 .txt1 {
       height: 85px;
+      height: 60px;
       width: 203px;
       padding: 5px 5px 5px 10px; }
       #sorts .cl1 .txt1 li, #sorts .cl2 .txt1 li, #sorts .cl3 .txt1 li, #sorts .cl4 .txt1 li {
@@ -375,5 +377,8 @@
           margin-left: 5px; }
         #sorts .cl1 .txt1 li:last-child i, #sorts .cl2 .txt1 li:last-child i, #sorts .cl3 .txt1 li:last-child i, #sorts .cl4 .txt1 li:last-child i {
           color: red; }
+  #sorts .active {
+    border: 3px solid #C5C5C5;
+    position: relative; }
 
 /*# sourceMappingURL=list.css.map */
